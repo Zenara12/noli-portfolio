@@ -51,12 +51,13 @@
 <script setup>
 import { ref } from 'vue'
 import { useMeta } from 'quasar'
+import { name as appID } from '../../package.json'
 
 const titleSEO = 'NoliDev'
 const descriptionSEO = `Hello I'm Noli a web developer that delivers responsive web apps`
 const tagsSEO =
   'html, css, javascript, php, Noli, Noli Pernes, Pernes, web, web developer, web development, app development, quasar, vue, seo'
-const imageSEO = `${window.location.origin}/my-portfolio/images/profilepic.png`
+const imageSEO = `${window.location.origin}/${appID}/images/profilepic.png`
 // SEO Optimization
 useMeta({
   title: titleSEO,
@@ -93,8 +94,7 @@ const scrollToSection = (href) => {
     section.scrollIntoView({ behavior: 'smooth' })
   }
 }
-const noriLogo =
-  'https://scontent.fceb3-1.fna.fbcdn.net/v/t39.30808-6/438303044_1001045115355245_3836067379854975523_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGLk88BAJw4gQt7IRftGXNmQWWTJlQRSphBZZMmVBFKmMm6UAQnQVxDDuZQ0qoWUsaBZIn7gJIrvQIln4-3xOll&_nc_ohc=Qc9NH21fTbQQ7kNvgHGEanU&_nc_oc=AdiExFUaf-ugH_Z8FbM0xuhBvBLUQzzpmovJZDsPyw6xeUkmGmJtrQ3O-637KST4yiw&_nc_zt=23&_nc_ht=scontent.fceb3-1.fna&_nc_gid=A4DGDqxEVqsr6dh2a035036&oh=00_AYB7fZexytvga4Cwo08VBNLXJ3UFcIjDLnsabwQjKR3Ubg&oe=67B3D8B1'
+const noriLogo = `icons/favicon-96x96.png`
 const btnHover = ref(false)
 const navS = [
   {
