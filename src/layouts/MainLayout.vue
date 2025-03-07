@@ -51,13 +51,12 @@
 <script setup>
 import { ref } from 'vue'
 import { useMeta } from 'quasar'
-import { name as appID } from '../../package.json'
 
 const titleSEO = 'NoliDev'
 const descriptionSEO = `Hello I'm Noli a web developer that delivers responsive web apps`
 const tagsSEO =
   'html, css, javascript, php, Noli, Noli Pernes, Pernes, web, web developer, web development, app development, quasar, vue, seo'
-const imageSEO = `${window.location.origin}/${appID}/images/profilepic.png`
+const imageSEO = `${window.location.origin}/images/profilepic.png`
 // SEO Optimization
 useMeta({
   title: titleSEO,
