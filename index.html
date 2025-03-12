@@ -18,9 +18,21 @@
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png" />
     <link rel="icon" type="image/ico" href="favicon.ico" />
 
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:heigth" content="600" />
     <meta property="og:image" content="/images/profilepic.png" />
   </head>
   <body>
     <!-- quasar:entry-point -->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const currentUrl = window.location.href
+        const metaTag = document.createElement('meta')
+        metaTag.setAttribute('property', 'og:url')
+        metaTag.setAttribute('content', currentUrl)
+        document.head.appendChild(metaTag)
+      })
+    </script>
   </body>
 </html>
