@@ -5,6 +5,7 @@
       v-model="introClass"
       v-bind:style="`margin-top:${separatorHeight};margin-bottom:${separatorHeight}`"
     />
+
     <!---Skills-->
     <SkillSection
       v-model="sectionClass"
@@ -75,7 +76,21 @@ const projectList = ref([
     anchorName: 'github.com/Alon',
     tabGroup: 'Mobile',
     description: `Mental tracker mobile app`,
-    imgPath: 'alon.jpg',
+    imgPath: 'alon/alon.jpg',
+    folderImages: [
+      'alon/LoadingScreen.jpg',
+      'alon/Home.jpg',
+      'alon/Profile.jpg',
+      'alon/Settings.jpg',
+      'alon/Breathing.jpg',
+      'alon/Excercise.jpg',
+      'alon/Mood.jpg',
+      'alon/Motivation.jpg',
+      'alon/Journal.jpg',
+      'alon/JournalCamera.jpg',
+      'alon/JournalAudio.jpg',
+      'alon/JournalNote.jpg',
+    ],
     tags: ['Quasar', 'VueJS', 'Capacitor', 'AndroidStudio'],
   },
   {
@@ -84,7 +99,8 @@ const projectList = ref([
     anchorName: 'barterdito.com',
     tabGroup: 'Web',
     description: `A web app that is Specifically for trade/barter of items`,
-    imgPath: 'barterdito.png',
+    imgPath: 'barterdito/barterdito.png',
+    folderImages: ['barterdito/barterdito.png'],
     tags: ['NuxtJS', 'VueJS', 'Tailwind', 'Node', 'ExpressJS'],
   },
   {
@@ -92,8 +108,22 @@ const projectList = ref([
     link: 'https://github.com/Zenara12/alumnitracer-main',
     anchorName: 'github.com/alumnitracer',
     tabGroup: 'Web',
-    description: `A website that gathers the were about's and career's of alumni's  `,
-    imgPath: 'alumnitracer.png',
+    description: `A website that gathers the where about's and career's of alumni's  `,
+    imgPath: 'onlinealumnitracer/alumnitracer.png',
+    folderImages: [
+      'onlinealumnitracer/Signin.png',
+      'onlinealumnitracer/Signup.png',
+      'onlinealumnitracer/ProfilePage.png',
+      'onlinealumnitracer/HomePage.png',
+      'onlinealumnitracer/AnnouncementPage.png',
+      'onlinealumnitracer/JobOfferPage.png',
+      'onlinealumnitracer/ForumPage.png',
+      'onlinealumnitracer/DeanDashBoard.png',
+      'onlinealumnitracer/Degreetable.png',
+      'onlinealumnitracer/AlumniTable.png',
+      'onlinealumnitracer/User-UserTable.png',
+      'onlinealumnitracer/ReportsCharts.png',
+    ],
     tags: ['VueJS', 'Supabase', 'Vuetify'],
   },
   {
@@ -102,8 +132,25 @@ const projectList = ref([
     anchorName: 'github.com/genshin-drafting',
     tabGroup: 'Web',
     description: `Drafting System for Genshin Game custom tournaments `,
-    imgPath: 'genshindrafting.png',
+    imgPath: 'genshindrafting/genshindrafting.png',
+    folderImages: ['genshindrafting/genshindrafting.png'],
     tags: ['VueJS', 'Supabase', 'CSS'],
+  },
+  {
+    name: 'Where Are You Now:Alumni Tracer Management System',
+    link: 'https://github.com/Zenara12/wayn',
+    anchorName: 'github.com/wayn',
+    tabGroup: 'Web',
+    description: `WAYN an Alumni Tracer Management System`,
+    imgPath: 'atmwlc/Profile.png',
+    folderImages: [
+      'atmwlc/Login.png',
+      'atmwlc/Profile.png',
+      'atmwlc/AccountSettings.png',
+      'atmwlc/Home.png',
+      'atmwlc/AcademicYear.png',
+    ],
+    tags: ['HTML', 'Javascript', 'CSS', 'Ajax', 'JQuery', 'PHP', 'MySQL'],
   },
 ])
 

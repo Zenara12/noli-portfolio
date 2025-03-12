@@ -23,7 +23,7 @@
           v-for="(tabs, index) in tabList"
           :key="index"
           :name="tabs.name"
-          class="bg-transparent row"
+          class="bg-transparent row justify-center"
         >
           <q-card
             v-for="(project, index) in projectList.filter(
@@ -33,13 +33,7 @@
             class="card-size bg-warning shadow-19 q-ma-md"
             flat
           >
-            <q-img
-              :src="`images/${project.imgPath}`"
-              :ratio="1"
-              clickable
-              @click="showDialog(project.imgPath)"
-            />
-
+            <CarouselComponent :folderImages="project.folderImages"> </CarouselComponent>
             <q-card-section>
               <div class="text-h6">{{ project.name }}</div>
               <div class="text-subtitle2">{{ project.description }}</div>
@@ -69,7 +63,7 @@
     </div>
 
     <!--Dialog for Image show-->
-    <q-dialog
+    <!-- <q-dialog
       v-model="showImg"
       :backdrop-filter="'blur(4px) saturate(150%)'"
       transition-show="slide-up"
@@ -93,17 +87,16 @@
           </q-btn>
         </q-card-actions>
       </q-card>
-    </q-dialog>
+    </q-dialog> -->
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import CarouselComponent from './CarouselComponent.vue'
 
-const showImg = ref(false)
 const projectClass = defineModel('projectClass')
-const screenSize = defineModel('screenSize')
-const popUpImg = ref('')
+
 const tab = ref('All')
 const tabList = [
   {
@@ -116,11 +109,6 @@ const tabList = [
     name: 'Mobile',
   },
 ]
-
-const showDialog = (value) => {
-  popUpImg.value = value
-  showImg.value = true
-}
 
 const projectList = defineModel('projectList')
 </script>
