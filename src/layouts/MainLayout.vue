@@ -53,35 +53,15 @@ import { ref } from 'vue'
 import { useMeta } from 'quasar'
 
 const titleSEO = 'NoliDev'
-const descriptionSEO = `Hello I'm Noli a web developer that delivers responsive web apps`
-const tagsSEO =
-  'html, css, javascript, php, Noli, Noli Pernes, Pernes, web, web developer, web development, app development, quasar, vue, seo'
 const imageSEO = '/images/profilepic.png'
 // SEO Optimization
 useMeta({
   title: titleSEO,
   meta: [
-    {
-      name: 'description',
-      content: descriptionSEO,
-    },
-    {
-      name: 'keywords',
-      content: tagsSEO,
-    },
-    { property: 'og:title', content: titleSEO },
-    { property: 'og:description', content: descriptionSEO },
-    { property: 'og:image:width', content: '1200' },
-    { property: 'og:image:height', content: '630' },
-    { property: 'og:type', content: 'website' },
     { property: 'og:url', content: `${window.location.origin}` },
     { property: 'twitter:url', content: `${window.location.origin}` },
     { property: 'twitter:card', content: 'summary_large_image' },
     { property: 'twitter:title', content: titleSEO },
-    {
-      property: 'twitter:description',
-      content: descriptionSEO,
-    },
     { property: 'twitter:image', content: imageSEO },
   ],
 })
