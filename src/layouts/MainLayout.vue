@@ -50,21 +50,6 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useMeta } from 'quasar'
-
-const titleSEO = 'NoliDev'
-const imageSEO = '/images/profilepic.png'
-// SEO Optimization
-useMeta({
-  title: titleSEO,
-  meta: [
-    { property: 'og:url', content: `${window.location.origin}` },
-    { property: 'twitter:url', content: `${window.location.origin}` },
-    { property: 'twitter:card', content: 'summary_large_image' },
-    { property: 'twitter:title', content: titleSEO },
-    { property: 'twitter:image', content: imageSEO },
-  ],
-})
 
 const scrollToSection = (href) => {
   const section = document.querySelector(href)
