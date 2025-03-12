@@ -71,7 +71,6 @@ useMeta({
     },
     { property: 'og:title', content: titleSEO },
     { property: 'og:description', content: descriptionSEO },
-    { property: 'og:image', content: imageSEO },
     { property: 'og:image:width', content: '1200' },
     { property: 'og:image:height', content: '630' },
     { property: 'og:type', content: 'website' },
