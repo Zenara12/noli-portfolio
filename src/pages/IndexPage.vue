@@ -59,8 +59,7 @@ const screenSize = computed(() => $q.screen.name)
 
 const date = new Date()
 const currentYear = date.getFullYear()
-const titleSEO = defineModel()
-const footNote = `© ${currentYear} ${titleSEO.value}. All rights reserved.`
+const footNote = `© ${currentYear} ${document.querySelector('title').innerHTML}. All rights reserved.`
 
 const separatorHeight = ref('10rem')
 const introClass = ref('flex justify-evenly items-center bg-transparent')

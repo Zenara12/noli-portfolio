@@ -43,7 +43,7 @@
     </q-footer>
 
     <q-page-container>
-      <router-view v-model="titleSEO" />
+      <router-view />
     </q-page-container>
   </q-layout>
 </template>
