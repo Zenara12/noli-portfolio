@@ -2,21 +2,77 @@
   <q-card :class="$q.screen.lt.md ? `${skillClass} column` : `${skillClass}`" flat>
     <q-card-section class="col">
       <h3 class="text-bold">My <span class="text-gradient">Skills</span></h3>
-      <div class="row justify-evenly">
-        <q-avatar
-          v-for="(skill, index) in skills"
-          :key="index"
-          :size="avatarSize"
-          square
-          class="gradient rounded-borders q-ma-sm"
-        >
-          <q-img :src="'images/' + skill.icon">
-            <q-tooltip>
+      <q-card class="q-mb-md bg-warning w-full">
+        <q-card-section>
+          <div class="text-h6 text-gradient">Front-end</div>
+          <div class="row justify-beetwen">
+            <q-chip
+              outline
+              :ripple="false"
+              color="primary"
+              text-color="white"
+              :size="avatarSize"
+              v-for="(skill, index) in frontEndTechnologies"
+              :key="index"
+            >
+              <q-avatar class="gradient">
+                <q-img :src="'images/' + skill.icon">
+                  <q-tooltip>
+                    {{ skill.name }}
+                  </q-tooltip>
+                </q-img>
+              </q-avatar>
               {{ skill.name }}
-            </q-tooltip>
-          </q-img>
-        </q-avatar>
-      </div>
+            </q-chip>
+          </div>
+        </q-card-section>
+        <q-card-section>
+          <div class="text-h6 text-gradient">Back-end</div>
+          <div class="row justify-beetwen">
+            <q-chip
+              outline
+              :ripple="false"
+              color="primary"
+              text-color="white"
+              :size="avatarSize"
+              v-for="(skill, index) in backEndTechnologies"
+              :key="index"
+            >
+              <q-avatar class="gradient">
+                <q-img :src="'images/' + skill.icon">
+                  <q-tooltip>
+                    {{ skill.name }}
+                  </q-tooltip>
+                </q-img>
+              </q-avatar>
+              {{ skill.name }}
+            </q-chip>
+          </div>
+        </q-card-section>
+        <q-card-section>
+          <div class="text-h6 text-gradient">Tools</div>
+          <div class="row justify-beetwen">
+            <q-chip
+              outline
+              :ripple="false"
+              color="primary"
+              text-color="white"
+              :size="avatarSize"
+              v-for="(skill, index) in tools"
+              :key="index"
+            >
+              <q-avatar class="gradient">
+                <q-img :src="'images/' + skill.icon">
+                  <q-tooltip>
+                    {{ skill.name }}
+                  </q-tooltip>
+                </q-img>
+              </q-avatar>
+              {{ skill.name }}
+            </q-chip>
+          </div>
+        </q-card-section>
+      </q-card>
     </q-card-section>
 
     <q-card-section class="col">
@@ -41,56 +97,59 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { useQuasar } from 'quasar'
 
 const $q = useQuasar()
 
 const skillClass = defineModel()
 
-const avatarSize = '4rem'
+const avatarSize = computed(() => ($q.screen.lt.md ? 'sm' : 'lg'))
 
-const skills = ref([
-  { name: 'HTML', icon: 'html.png' },
-  { name: 'CSS', icon: 'css.png' },
-  { name: 'JAVASCRIPT', icon: 'javascript.png' },
-  { name: 'JQUERY', icon: 'jquery.png' },
-  { name: 'PHP', icon: 'php.png' },
-  { name: 'PYTHON', icon: 'python.png' },
-  { name: 'JAVA', icon: 'java.png' },
-  { name: 'VUE', icon: 'vue.png' },
-  { name: 'QUASAR', icon: 'quasar.png' },
-  { name: 'NODE EXPRESS', icon: 'nodeexpress.png' },
-  { name: 'LARAVEL', icon: 'laravel.png' },
-  { name: 'BOOTSTRAP', icon: 'bootstrap.png' },
-  { name: 'TAILWIND', icon: 'tailwind.png' },
-  { name: 'MYSQL', icon: 'mysql.png' },
-  { name: 'SQLITE', icon: 'sqlite.png' },
-  { name: 'SUPABASE', icon: 'supabase.png' },
-  { name: 'GIT', icon: 'git.png' },
-  { name: 'GITHUB', icon: 'github.png' },
-  { name: 'ANDROID STUDIO', icon: 'androidstudio.png' },
-  { name: 'CAPACITOR', icon: 'capacitor.png' },
-  { name: 'ARDUINO', icon: 'arduino.png' },
-  { name: 'POSTMAN', icon: 'postman.png' },
-  { name: 'VSCODE', icon: 'vsc.png' },
-  { name: 'XAMPP', icon: 'xampp.png' },
-  { name: 'CANVA', icon: 'canva.png' },
-  { name: 'FIGMA', icon: 'figma.png' },
-])
+const frontEndTechnologies = [
+  { name: 'Html', icon: 'html.png' },
+  { name: 'Css', icon: 'css.png' },
+  { name: 'Javascript', icon: 'javascript.png' },
+  { name: 'Jquery', icon: 'jquery.png' },
+  { name: 'Vue', icon: 'vue.png' },
+  { name: 'Quasar', icon: 'quasar.png' },
+  { name: 'Bootstrap', icon: 'bootstrap.png' },
+  { name: 'Tailwind', icon: 'tailwind.png' },
+  { name: 'Figma', icon: 'figma.png' },
+]
+
+const backEndTechnologies = [
+  { name: 'Php', icon: 'php.png' },
+  { name: 'Python', icon: 'python.png' },
+  { name: 'Java', icon: 'java.png' },
+  { name: 'Node Express', icon: 'nodeexpress.png' },
+  { name: 'Laravel', icon: 'laravel.png' },
+  { name: 'Mysql', icon: 'mysql.png' },
+  { name: 'Sqlite', icon: 'sqlite.png' },
+  { name: 'Supabase', icon: 'supabase.png' },
+]
+
+const tools = [
+  { name: 'Git', icon: 'git.png' },
+  { name: 'Github', icon: 'github.png' },
+  { name: 'Android studio', icon: 'androidstudio.png' },
+  { name: 'Capacitor', icon: 'capacitor.png' },
+  { name: 'Arduino', icon: 'arduino.png' },
+  { name: 'Postman', icon: 'postman.png' },
+  { name: 'Vscode', icon: 'vsc.png' },
+  { name: 'Xampp', icon: 'xampp.png' },
+  { name: 'Canva', icon: 'canva.png' },
+]
+
 const experiences = ref([
   {
     title: 'Freelance',
     company: '',
-    description: `Web Developer: Apr 2023 – Present
+    description: `Web Developer
                   <ul>
                       <li>Designed and developed responsive websites and web applications tailored to client requirements, ensuring functionality, performance, and user experience.</li>
-                  </ul>
-                  IT Technician & Content Developer: Mar 2020 – Present
-                  <ul>
-                    <li>Provided professional photo and video editing services for various clients through online job platforms and in the locality, enhancing visual content for marketing, social media, and personal projects.</li>
                   </ul>`,
-    period: '',
+    period: 'Apr 2023 – Present',
   },
   {
     title: 'IT Instructor',
