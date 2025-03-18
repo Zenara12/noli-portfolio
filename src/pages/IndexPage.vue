@@ -2,7 +2,8 @@
   <q-page class="text-primary" style="max-width: 1200px; margin: auto">
     <!---Introduction-->
     <IntroductionSection
-      v-model="introClass"
+      :introClass="introClass"
+      :contactInfo="contactInfo"
       v-bind:style="`margin-top:${separatorHeight};margin-bottom:${separatorHeight}`"
     />
 
@@ -29,7 +30,8 @@
 
     <!--Contact-->
     <ContactSection
-      v-model="contactClass"
+      :contactClass="contactClass"
+      :contactInfo="contactInfo"
       v-bind:style="`margin-bottom:${separatorHeight}`"
       id="contact"
     />
@@ -67,6 +69,34 @@ const aboutClass = ref('flex bg-transparent q-pt-xl')
 const sectionClass = ref('flex justify-center bg-transparent q-pt-xl q-mx-auto')
 const projectClass = ref('flex column flex-center')
 const contactClass = ref('flex items-start justify-evenly bg-transparent bg-warning ')
+
+const contactInfo = [
+  { label: 'Phone', value: '+63951-366-4700', icon: 'phone', link: '#' },
+  {
+    label: 'Facebook',
+    value: 'fb.com/nolipernes',
+    icon: 'mdi-facebook',
+    link: 'https://www.facebook.com/nolipernes03',
+  },
+  {
+    label: 'GitHub',
+    value: 'github.com/Zenara12',
+    icon: 'mdi-github',
+    link: 'https://github.com/Zenara12',
+  },
+  {
+    label: 'LinkedIn',
+    value: 'linkedin.com/nolipernes',
+    icon: 'mdi-linkedin',
+    link: 'https://www.linkedin.com/in/noli-pernes/',
+  },
+  {
+    label: 'Email',
+    value: 'nolipernes@gmail.com',
+    icon: 'mdi-google',
+    link: 'mailto:nolipernes@gmail.com',
+  },
+]
 
 const projectList = ref([
   {

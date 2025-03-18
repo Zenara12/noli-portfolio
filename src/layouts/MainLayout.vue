@@ -31,6 +31,7 @@
           :icon="nav.icon"
           :key="index"
           :ripple="false"
+          :label="nav.name"
           :class="btnHover === index ? 'text-secondary' : 'text-primary'"
           class="bg-transparent"
           @mouseover="btnHover = index"
