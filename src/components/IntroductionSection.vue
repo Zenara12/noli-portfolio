@@ -48,18 +48,6 @@
         always looking for new challenges to improve my skills and create efficient digital
         solutions.
       </p>
-      <div class="buttons">
-        <q-btn
-          outline
-          color="orange"
-          icon="download"
-          label="Download resume"
-          class="q-mt-sm"
-          href="files/NoliPernesCV.pdf"
-          target="_blank"
-          download="NoliPernesCV.pdf"
-        />
-      </div>
     </q-card-section>
   </q-card>
 </template>
