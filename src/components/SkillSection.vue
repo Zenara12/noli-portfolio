@@ -125,6 +125,10 @@ const experiences = ref([
     description: `Web Developer
                   <ul>
                       <li>Designed and developed responsive websites and web applications tailored to client requirements, ensuring functionality, performance, and user experience.</li>
+                      <li>Delivered end-to-end solutions across multiple freelance projects, including mobile wellness apps, bartering
+                      platforms, academic systems, and data-driven dashboards. </li>
+                      <li> Ensured optimal performance, intuitive UX/UI, and seamless integration with back-end services using tools
+like NuxtJS, Quasar, Supabase, and NodeJS. </li>
                   </ul>`,
     period: 'Apr 2023 – Present',
   },
