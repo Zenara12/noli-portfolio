@@ -6,15 +6,8 @@
         <q-card-section>
           <div class="text-h6 text-gradient">Front-end</div>
           <div class="row justify-beetwen">
-            <q-chip
-              outline
-              :ripple="false"
-              color="primary"
-              text-color="white"
-              :size="avatarSize"
-              v-for="(skill, index) in frontEndTechnologies"
-              :key="index"
-            >
+            <q-chip outline :ripple="false" color="primary" text-color="white" :size="avatarSize"
+              v-for="(skill, index) in frontEndTechnologies" :key="index">
               <q-avatar class="gradient">
                 <q-img :src="'images/' + skill.icon">
                   <q-tooltip>
@@ -29,15 +22,8 @@
         <q-card-section>
           <div class="text-h6 text-gradient">Back-end</div>
           <div class="row justify-beetwen">
-            <q-chip
-              outline
-              :ripple="false"
-              color="primary"
-              text-color="white"
-              :size="avatarSize"
-              v-for="(skill, index) in backEndTechnologies"
-              :key="index"
-            >
+            <q-chip outline :ripple="false" color="primary" text-color="white" :size="avatarSize"
+              v-for="(skill, index) in backEndTechnologies" :key="index">
               <q-avatar class="gradient">
                 <q-img :src="'images/' + skill.icon">
                   <q-tooltip>
@@ -52,15 +38,8 @@
         <q-card-section>
           <div class="text-h6 text-gradient">Tools</div>
           <div class="row justify-beetwen">
-            <q-chip
-              outline
-              :ripple="false"
-              color="primary"
-              text-color="white"
-              :size="avatarSize"
-              v-for="(skill, index) in tools"
-              :key="index"
-            >
+            <q-chip outline :ripple="false" color="primary" text-color="white" :size="avatarSize"
+              v-for="(skill, index) in tools" :key="index">
               <q-avatar class="gradient">
                 <q-img :src="'images/' + skill.icon">
                   <q-tooltip>
@@ -77,11 +56,7 @@
 
     <q-card-section class="col">
       <h3 class="text-bold">My Experiences</h3>
-      <q-card
-        v-for="exp in experiences"
-        :key="exp.title"
-        class="q-mb-md bg-warning text-white w-full"
-      >
+      <q-card v-for="exp in experiences" :key="exp.title" class="q-mb-md bg-warning text-white w-full">
         <q-card-section>
           <q-icon name="work" size="xl" color="white" />
           <div class="row items-center justify-between">
@@ -111,6 +86,7 @@ const frontEndTechnologies = [
   { name: 'Css', icon: 'css.png' },
   { name: 'Javascript', icon: 'javascript.png' },
   { name: 'Jquery', icon: 'jquery.png' },
+  { name: 'Nuxt', icon: 'nuxt.svg' },
   { name: 'Vue', icon: 'vue.png' },
   { name: 'Quasar', icon: 'quasar.png' },
   { name: 'Bootstrap', icon: 'bootstrap.png' },
@@ -122,7 +98,8 @@ const backEndTechnologies = [
   { name: 'Php', icon: 'php.png' },
   { name: 'Python', icon: 'python.png' },
   { name: 'Java', icon: 'java.png' },
-  { name: 'Node Express', icon: 'nodeexpress.png' },
+  { name: 'NodeJS', icon: 'nodeexpress.png' },
+  { name: 'ExpressJS', icon: 'express-js.png' },
   { name: 'Laravel', icon: 'laravel.png' },
   { name: 'Mysql', icon: 'mysql.png' },
   { name: 'Sqlite', icon: 'sqlite.png' },
