@@ -86,7 +86,7 @@ const frontEndTechnologies = [
   { name: 'Css', icon: 'css.png' },
   { name: 'Javascript', icon: 'javascript.png' },
   { name: 'Jquery', icon: 'jquery.png' },
-
+  { name: 'TypeScript', icon: 'typescript.png' },
   { name: 'Vue', icon: 'vue.png' },
   { name: 'Nuxt', icon: 'nuxt.svg' },
   { name: 'Quasar', icon: 'quasar.png' },
