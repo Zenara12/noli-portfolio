@@ -1,40 +1,20 @@
 <template>
   <q-page class="text-primary" style="max-width: 1200px; margin: auto">
     <!---Introduction-->
-    <IntroductionSection
-      :introClass="introClass"
-      :contactInfo="contactInfo"
-      v-bind:style="`margin-top:${separatorHeight};margin-bottom:${separatorHeight}`"
-    />
+    <IntroductionSection :introClass="introClass" :contactInfo="contactInfo"
+      v-bind:style="`margin-top:${separatorHeight};margin-bottom:${separatorHeight}`" />
 
     <!---Skills-->
-    <SkillSection
-      v-model="sectionClass"
-      v-bind:style="`margin-bottom:${separatorHeight}`"
-      id="skills"
-    />
-    <ProjectSection
-      v-model:projectClass="projectClass"
-      v-model:screenSize="screenSize"
-      v-model:projectList="projectList"
-      v-bind:style="`margin-bottom:${separatorHeight}`"
-      id="projects"
-    />
+    <SkillSection v-model="sectionClass" v-bind:style="`margin-bottom:${separatorHeight}`" id="skills" />
+    <ProjectSection v-model:projectClass="projectClass" v-model:screenSize="screenSize"
+      v-model:projectList="projectList" v-bind:style="`margin-bottom:${separatorHeight}`" id="projects" />
     <!--- About Me -->
-    <AboutMeSection
-      v-model:aboutClass="aboutClass"
-      v-model:projectListSize="projectList.length"
-      v-bind:style="`margin-bottom:${separatorHeight}`"
-      id="about"
-    />
+    <AboutMeSection v-model:aboutClass="aboutClass" v-model:projectListSize="projectList.length"
+      v-bind:style="`margin-bottom:${separatorHeight}`" id="about" />
 
     <!--Contact-->
-    <ContactSection
-      :contactClass="contactClass"
-      :contactInfo="contactInfo"
-      v-bind:style="`margin-bottom:${separatorHeight}`"
-      id="contact"
-    />
+    <ContactSection :contactClass="contactClass" :contactInfo="contactInfo"
+      v-bind:style="`margin-bottom:${separatorHeight}`" id="contact" />
     <div class="flex flex-center q-mb-xl">{{ footNote }}</div>
 
     <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
@@ -101,8 +81,12 @@ const contactInfo = [
 const projectList = ref([
   {
     name: 'Alon',
-    link: 'https://github.com/Zenara12/alonMentalTracker',
-    anchorName: 'github.com/Alon',
+    url: [
+      {
+        link: 'https://github.com/Zenara12/alonMentalTracker',
+        anchorName: 'github.com/Alon',
+      }
+    ],
     tabGroup: 'Mobile',
     description: `Mental tracker mobile app`,
     imgPath: 'alon/alon.jpg',
@@ -120,22 +104,85 @@ const projectList = ref([
       'alon/JournalAudio.jpg',
       'alon/JournalNote.jpg',
     ],
-    tags: ['Quasar', 'VueJS', 'Capacitor', 'AndroidStudio'],
+    tags: ['Quasar', 'VueJS', 'Pinia', 'Capacitor', 'AndroidStudio'],
+  },
+  {
+    name: 'React-Expo Task App',
+    url: [
+      {
+        link: 'https://github.com/Zenara12/todo-expo.git',
+        anchorName: 'github.com/expo-taskapp',
+      }
+    ],
+    tabGroup: 'Mobile',
+    description: `Task App using React Native and Expo and Zustand for State Management`,
+    imgPath: 'taskapp/home.png',
+    folderImages: [
+      'taskapp/home.png',
+      'taskapp/add.png',
+      'taskapp/viewupdate.png',
+      'taskapp/delete.png',
+    ],
+    tags: ['React Native', 'TypeScript', 'Expo', 'Zustand'],
   },
   {
     name: 'BarterDito',
-    link: 'https://barterdito.com',
-    anchorName: 'barterdito.com',
+    url: [{
+      link: 'https://barterdito.com',
+      anchorName: 'barterdito.com',
+    }],
     tabGroup: 'Web',
     description: `A web app that is Specifically for trade/barter of items`,
     imgPath: 'barterdito/barterdito.png',
     folderImages: ['barterdito/barterdito.png'],
-    tags: ['NuxtJS', 'VueJS', 'Tailwind', 'Node', 'ExpressJS'],
+    tags: ['NuxtJS', 'Pinia', 'VueJS', 'Tailwind', 'Node', 'ExpressJS'],
+  },
+  {
+    name: 'NextJS Blog',
+    url: [{
+      link: 'https://github.com/Zenara12/codebility-assessment/tree/noli-pernes/fullstack-1-2',
+      anchorName: 'github.com/NextJS-Blog',
+    }],
+    tabGroup: 'Web',
+    description: `A Blog App using NextJS Navigation, API, Form Actions, and ModuleCSS for responsiveness for codebility assessment`,
+    imgPath: 'nextjsblogcodebility/DesktopDisplay.png',
+    folderImages: [
+      'nextjsblogcodebility/DesktopDisplay.png',
+      'nextjsblogcodebility/MobileDisplay.png',
+      'nextjsblogcodebility/SingleDestktop.png',
+      'nextjsblogcodebility/SingleMobile.png',
+    ],
+    tags: ['NextJS', 'CSS', 'TypeScript'],
+  },
+  {
+    name: 'Task Web App',
+    url: [
+      {
+        link: 'https://github.com/Zenara12/react-sprobe',
+        anchorName: 'github.com/FE',
+      },
+      {
+        link: 'https://github.com/Zenara12/laravel-api',
+        anchorName: 'github.com/BE',
+      },
+    ],
+    tabGroup: 'Web',
+    description: `Task Web App with ReactJS with Tailwind as Frontend and LaravelAPI MySQL as backend`,
+    imgPath: 'task-react-laravel-api/dashboard.png',
+    folderImages: [
+      'task-react-laravel-api/dashboard.png',
+      'task-react-laravel-api/sign-in.png',
+      'task-react-laravel-api/sign-up.png',
+      'task-react-laravel-api/task.png',
+    ],
+    tags: ['React', 'Tailwind', 'Laravel', 'MySQL', 'Axios', 'Vite'],
   },
   {
     name: 'Online Alumni Tracer',
-    link: 'https://github.com/Zenara12/alumnitracer-main',
-    anchorName: 'github.com/alumnitracer',
+    url: [{
+      link: 'https://github.com/Zenara12/alumnitracer-main',
+      anchorName: 'github.com/alumnitracer',
+    }],
     tabGroup: 'Web',
     description: `A website that gathers the where about's and career's of alumni's  `,
     imgPath: 'onlinealumnitracer/alumnitracer.png',
@@ -153,12 +200,14 @@ const projectList = ref([
       'onlinealumnitracer/User-UserTable.png',
       'onlinealumnitracer/ReportsCharts.png',
     ],
-    tags: ['VueJS', 'Supabase', 'Vuetify'],
+    tags: ['VueJS', 'TypeScript', 'Pinia', 'Supabase', 'Vuetify'],
   },
   {
     name: 'Genshin Drafting',
-    link: 'https://github.com/Zenara12/genshin-drafting',
-    anchorName: 'github.com/genshin-drafting',
+    url: [{
+      link: 'https://github.com/Zenara12/genshin-drafting',
+      anchorName: 'github.com/genshin-drafting',
+    }],
     tabGroup: 'Web',
     description: `Drafting System for Genshin Game custom tournaments `,
     imgPath: 'genshindrafting/genshindrafting.png',
@@ -167,8 +216,10 @@ const projectList = ref([
   },
   {
     name: 'Where Are You Now:Alumni Tracer Management System',
-    link: 'https://github.com/Zenara12/wayn',
-    anchorName: 'github.com/wayn',
+    url: [{
+      link: 'https://github.com/Zenara12/wayn',
+      anchorName: 'github.com/wayn',
+    }],
     tabGroup: 'Web',
     description: `WAYN an Alumni Tracer Management System`,
     imgPath: 'atmwlc/Profile.png',
