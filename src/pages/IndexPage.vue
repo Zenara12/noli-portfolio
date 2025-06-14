@@ -85,6 +85,10 @@ const projectList = ref([
       {
         link: 'https://github.com/Zenara12/alonMentalTracker',
         anchorName: 'github.com/Alon',
+      },
+      {
+        link: 'https://drive.google.com/drive/folders/1zEvrarYrLo7qc_YvKSSwTePKtyV0Nenu?usp=sharing',
+        anchorName: 'alon.apk',
       }
     ],
     tabGroup: 'Mobile',
