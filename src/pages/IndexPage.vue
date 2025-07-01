@@ -80,6 +80,25 @@ const contactInfo = [
 
 const projectList = ref([
   {
+    name: 'Dishlicious',
+    url: [
+      {
+        link: 'https://dishlicious.vercel.app/',
+        anchorName: 'Dishlicious',
+      },
+    ],
+    tabGroup: 'Web',
+    description: 'Dish recipes for you to cook!',
+    imgPath: 'dish/dish1.jpg',
+    folderImages: [
+      'dish/dish1.jpg',
+      'dish/dish2.jpg',
+      'dish/dish3.jpg',
+      'dish/dish4.jpg',
+    ],
+    tags: ['NuxtJS', 'VueJS', 'Typescript', 'Tailwind', 'SEO'],
+  },
+  {
     name: 'Alon',
     url: [
       {
