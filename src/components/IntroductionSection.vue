@@ -1,7 +1,7 @@
 <template>
   <q-card :class="$q.screen.lt.sm ? `${introClass} column` : `${introClass} row reverse `" flat>
     <q-card-section class="col flex items-center justify-end">
-      <div class="column q-gutter-y-md">
+      <div class="column q-gutter-y-md items-center">
         <div>
           <q-avatar size="15rem" :ratio="1" outline>
             <q-img :src="imgURL" :ratio="1" spinner-color="secondary" loading="lazy"
