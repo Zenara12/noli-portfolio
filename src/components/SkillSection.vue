@@ -85,7 +85,7 @@ const frontEndTechnologies = [
   { name: 'Html', icon: 'html.png' },
   { name: 'Css', icon: 'css.png' },
   { name: 'Javascript', icon: 'javascript.png' },
-  { name: 'Jquery', icon: 'jquery.png' },
+  { name: 'JQuery', icon: 'jquery.png' },
   { name: 'TypeScript', icon: 'typescript.png' },
   { name: 'Vue', icon: 'vue.png' },
   { name: 'Nuxt', icon: 'nuxt.svg' },
@@ -95,13 +95,10 @@ const frontEndTechnologies = [
   { name: 'NextJS', icon: 'nextjs.png' },
   { name: 'Bootstrap', icon: 'bootstrap.png' },
   { name: 'Tailwind', icon: 'tailwind.png' },
-  { name: 'Figma', icon: 'figma.png' },
 ]
 
 const backEndTechnologies = [
   { name: 'Php', icon: 'php.png' },
-  { name: 'Python', icon: 'python.png' },
-  { name: 'Java', icon: 'java.png' },
   { name: 'NodeJS', icon: 'nodeexpress.png' },
   { name: 'ExpressJS', icon: 'express-js.png' },
   { name: 'Laravel', icon: 'laravel.png' },
@@ -115,11 +112,12 @@ const tools = [
   { name: 'Github', icon: 'github.png' },
   { name: 'Android studio', icon: 'androidstudio.png' },
   { name: 'Capacitor', icon: 'capacitor.png' },
-  { name: 'Arduino', icon: 'arduino.png' },
   { name: 'Postman', icon: 'postman.png' },
   { name: 'Vscode', icon: 'vsc.png' },
   { name: 'Xampp', icon: 'xampp.png' },
   { name: 'Canva', icon: 'canva.png' },
+
+  { name: 'Figma', icon: 'figma.png' },
 ]
 
 const experiences = ref([
@@ -141,13 +139,11 @@ like NuxtJS, Quasar, Supabase, and NodeJS. </li>
     company: 'Saint Aloysius Institute of Technology',
     description: `
     <ul>
-      <li>
-        Taught Grade 11 Students Java Programming from Basic to OOP principles, and trained them to enhance their      problem-solving skills.
-      </li>
-      <li>
-        Trained Gr. 12 Students on how to perform Computer System Servicing – NC II / Computer Trouble Shooting & Networking
-      </li>
-    </ul>
+      <li>Instructed Grade 11 students in Java programming, from fundamentals to OOP, with emphasis on problem-solving.</li>
+      <li>Trained Grade 12 students in Computer System Servicing (NC II), covering troubleshooting, diagnostics, and networking.</li>
+      <li>Developed a simple questionnaire program used for student quizzes and entrance examinations.</li>
+      <li>Organized and maintained the computer laboratory, ensuring readiness for programming classes and computer system servicing activities.</li>
+      </ul>
     `,
     period: 'June 2019 - July 2020',
   },
