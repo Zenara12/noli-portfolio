@@ -5,7 +5,12 @@
       v-bind:style="`margin-top:${separatorHeight};margin-bottom:${separatorHeight}`" />
 
     <!---Skills-->
-    <SkillSection v-model="sectionClass" v-bind:style="`margin-bottom:${separatorHeight}`" id="skills" />
+    <SkillSection 
+      :class="sectionClass" 
+      :experienceData="experienceData"
+      :isLoading="isLoading"
+      v-bind:style="`margin-bottom:${separatorHeight}`" 
+      id="skills" />
     <ProjectSection v-model:projectClass="projectClass" v-model:screenSize="screenSize"
       v-model:projectList="projectList" v-bind:style="`margin-bottom:${separatorHeight}`" id="projects" />
     <!--- About Me -->
@@ -26,6 +31,9 @@
 <script setup>
 import { ref, watch, computed, onMounted, defineAsyncComponent } from 'vue'
 import { useQuasar } from 'quasar'
+import { useExperienceData } from 'src/composables/experienceData'
+
+const { experienceData, isLoading, fetchExpData } = useExperienceData()
 
 const IntroductionSection = defineAsyncComponent(
   () => import('src/components/IntroductionSection.vue'),
@@ -265,8 +273,9 @@ const checkHeight = (value) => {
   else if (value === 'xl') return (separatorHeight.value = '15rem')
 }
 
-onMounted(() => {
+onMounted(async () => {
   checkHeight(screenSize.value)
+  await fetchExpData()
 })
 
 watch(

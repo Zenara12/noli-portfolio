@@ -72,9 +72,20 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import { useQuasar } from 'quasar'
 
+const props = defineProps({
+  experienceData: {
+    type: Array,
+    required: true,
+    default: () => []
+  },
+  isLoading: {
+    type: Boolean,
+    default: true
+  }
+})
 const $q = useQuasar()
 
 const skillClass = defineModel()
@@ -148,6 +159,19 @@ like NuxtJS, Quasar, Supabase, and NodeJS. </li>
     period: 'June 2019 - July 2020',
   },
 ])
+
+onMounted(()=>{
+  if(!props.isLoading) {
+    experiences.value = props.experienceData
+  }
+})
+
+watch(() => props.isLoading, (newValue) => {
+  if (!newValue) { // When isLoading becomes false
+    experiences.value = props.experienceData
+    console.log("Child synchronized experiences successfully:", experiences.value)
+  }
+}, { immediate: true })
 </script>
 
 <style scoped>
